@@ -27,10 +27,10 @@ public class Robot extends IterativeRobot {
 	public static PowerDistributionPanel pdp;
 	Preferences pref; 
 	public static OI oi;
-	public static USBCamera cam;
 
     Command autonomousCommand;
     SendableChooser chooser;
+    public static CameraServer cam1;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -44,7 +44,10 @@ public class Robot extends IterativeRobot {
         DriveBase = new Chassis();
         Arm = new ShovelSmacker();
         pdp = new PowerDistributionPanel();
-        cam = new USBCamera();
+        cam1 = CameraServer.getInstance();
+        cam1.setQuality(50);
+        cam1.startAutomaticCapture("Camera-1");
+        
         
         SmartDashboard.putData("Auto mode", chooser);
         SmartDashboard.putData(DriveBase);
