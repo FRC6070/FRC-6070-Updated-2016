@@ -9,5 +9,5 @@ Katie Chen,
 Stephen Guo,
 Anjali Thatte,
 Jing Yao,
-Kshitij (...),
+Kshitij Vaidya,
 Kenisha Arora
