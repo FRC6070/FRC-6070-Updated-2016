@@ -1,0 +1,5 @@
+TEAM MEMBERS:
+Please make a different branch before editing. Myself and Nafeh are the ones who will approve pull requests.
+Do not make any changes to the 'master' branch. Thanks!
+
+- Tiger Kong
