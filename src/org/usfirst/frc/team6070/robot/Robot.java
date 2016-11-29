@@ -30,7 +30,7 @@ public class Robot extends IterativeRobot {
 
     Command autonomousCommand;
     SendableChooser chooser;
-    public static CameraServer cam1;
+    public static CameraServer server;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -44,10 +44,10 @@ public class Robot extends IterativeRobot {
         DriveBase = new Chassis();
         Arm = new ShovelSmacker();
         pdp = new PowerDistributionPanel();
-        cam1 = CameraServer.getInstance();
-        cam1.setQuality(50);
-        cam1.startAutomaticCapture("Camera-1");
-        
+        server = CameraServer.getInstance();
+        server.setQuality(50);
+        server.setSize(1);
+        server.startAutomaticCapture("cam1");
         
         SmartDashboard.putData("Auto mode", chooser);
         SmartDashboard.putData(DriveBase);
