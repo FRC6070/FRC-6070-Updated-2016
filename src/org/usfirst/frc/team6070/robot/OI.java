@@ -43,17 +43,7 @@ public class OI {
 		}
 	}
 	
-	public static double getDriveX()
-	{
-		if (Math.abs(stick.getX()) < 0.1)
-		{
-			return 0;
-		}
-		else
-		{
-			return stick.getX();
-		}
-	}
+	
 	public static double getDriveY()
 	{
 		if (Math.abs(stick.getY()) < 0.1)
