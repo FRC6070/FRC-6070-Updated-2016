@@ -6,11 +6,17 @@ import org.usfirst.frc.team6070.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.*;
 
+import edu.wpi.first.wpilibj.command.*;
+
 /**
  *
  */
 public class Shooter extends Subsystem {
     
+	public static double slow = 0.5;
+	public static double medium = 0.8;
+	public static double fast = 1.0;
+	
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	Victor mainMotor = new Victor (RobotMap.shooterPort);
@@ -18,10 +24,20 @@ public class Shooter extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
-    public void moveit(double x)
-    {
-    	mainMotor.set(x*0.3);
+    
+    public void moveIt(double x) {
+    	mainMotor.set(x);
     }
+    
+//    public void slow() {
+//    	moveIt(slow1);
+//    }
+//    public void medium() {
+//    	moveIt(medium);
+//    }
+//    public void fast() {
+//    	moveIt(fast);
+//    }
     public void stop()
     {
     	mainMotor.set(0);

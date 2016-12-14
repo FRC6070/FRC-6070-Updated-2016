@@ -1,21 +1,22 @@
 package org.usfirst.frc.team6070.robot.commands;
 
 import org.usfirst.frc.team6070.robot.*;
+import org.usfirst.frc.team6070.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class HIT_THE_FLOOR extends Command {
+public class Slow extends Command {
 
-    double a;
-	public HIT_THE_FLOOR(double x) {
+    double x;
+	public Slow() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 		// passes a speed as x
     	requires(Robot.shooter);
-    	this.a = x;
+    	x = Shooter.slow;
     	
     }
 
@@ -23,9 +24,9 @@ public class HIT_THE_FLOOR extends Command {
     protected void initialize() {
     }
 
-    // Called repeatedly when this Command is scheduled to run
+    // Called respeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.shooter.moveit(a);
+    	Robot.shooter.moveIt(x);
     }
 
     // Make this return true when this Command no longer needs to run execute()
