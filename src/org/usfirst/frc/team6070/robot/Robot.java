@@ -11,6 +11,7 @@ import org.usfirst.frc.team6070.robot.subsystems.*;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.vision.*;
+import edu.wpi.first.wpilibj.PowerDistributionPanel;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -23,7 +24,7 @@ public class Robot extends IterativeRobot {
 
 	//public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static Chassis DriveBase;
-	public static ShovelSmacker Arm;
+	public static Shooter shooter;
 	public static PowerDistributionPanel pdp;
 	Preferences pref; 
 	public static OI oi;
@@ -42,7 +43,6 @@ public class Robot extends IterativeRobot {
         chooser.addDefault("Default Auto", new ExampleCommand());
         chooser.addObject("My Auto", new Auto()); // Drive Forward
         DriveBase = new Chassis();
-        Arm = new ShovelSmacker();
         pdp = new PowerDistributionPanel();
         cam1 = CameraServer.getInstance();
         cam1.setQuality(50);
@@ -51,7 +51,7 @@ public class Robot extends IterativeRobot {
         
         SmartDashboard.putData("Auto mode", chooser);
         SmartDashboard.putData(DriveBase);
-        SmartDashboard.putData(Arm);
+        SmartDashboard.putData(shooter);
     }
 	
 	/**

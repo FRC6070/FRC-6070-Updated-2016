@@ -14,7 +14,7 @@ public class HIT_THE_FLOOR extends Command {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 		// passes a speed as x
-    	requires(Robot.Arm);
+    	requires(Robot.shooter);
     	this.a = x;
     	
     }
@@ -25,7 +25,7 @@ public class HIT_THE_FLOOR extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.Arm.moveit(a);
+    	Robot.shooter.moveit(a);
     }
 
     // Make this return true when this Command no longer needs to run execute()

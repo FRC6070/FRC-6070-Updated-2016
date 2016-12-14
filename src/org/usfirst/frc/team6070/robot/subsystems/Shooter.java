@@ -9,22 +9,22 @@ import edu.wpi.first.wpilibj.*;
 /**
  *
  */
-public class ShovelSmacker extends Subsystem {
+public class Shooter extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-	Victor motor = new Victor (RobotMap.Armmotor);
+	Victor mainMotor = new Victor (RobotMap.shooterPort);
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
     public void moveit(double x)
     {
-    	motor.set(x*0.3);
+    	mainMotor.set(x*0.3);
     }
     public void stop()
     {
-    	motor.set(0);
+    	mainMotor.set(0);
     }
 }
 
