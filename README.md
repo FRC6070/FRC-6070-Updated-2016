@@ -4,6 +4,7 @@ This is the code for the updated 2016 robot, The Iron Curtain. We are testing co
 
 Authors are Team 6070 Gryphon Machine, 2017 programming team:
 Captains: Tiger Kong, Nafeh Shoaib
+
 Katie Chen,
 Stephen Guo,
 Anjali Thatte,
