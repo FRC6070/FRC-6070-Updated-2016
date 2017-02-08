@@ -1,32 +1,28 @@
 package org.usfirst.frc.team6070.robot.commands;
 
-import org.usfirst.frc.team6070.robot.OI;
-import org.usfirst.frc.team6070.robot.Robot;
-
 import edu.wpi.first.wpilibj.command.Command;
-
+import edu.wpi.first.wpilibj.*;
+import org.usfirst.frc.team6070.*;
+import org.usfirst.frc.team6070.robot.Robot;
 /**
  *
  */
-public class START_DRIVING_GODDAMNIT extends Command {
+public class StopDriving extends Command {
 
-    public START_DRIVING_GODDAMNIT() {
+    public StopDriving() {
         // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
-    	requires(Robot.DriveBase);
-    	setTimeout(0.9);
-
+       requires(Robot.DriveBase);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.DriveBase.drive(OI.driveY(), OI.driveX());
+    Robot.DriveBase.stop();
     }
+    
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {

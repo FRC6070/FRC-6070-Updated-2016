@@ -45,8 +45,8 @@ public class Robot extends IterativeRobot {
         Arm = new ShovelSmacker();
         pdp = new PowerDistributionPanel();
         cam1 = CameraServer.getInstance();
-        cam1.setQuality(50);
-        cam1.startAutomaticCapture("Camera-1");
+      //  cam1.setQuality(50);
+        //cam1.startAutomaticCapture("Camera-1");
         
         
         SmartDashboard.putData("Auto mode", chooser);

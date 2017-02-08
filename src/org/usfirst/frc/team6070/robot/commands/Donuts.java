@@ -22,7 +22,7 @@ public class Donuts extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.DriveBase.circleOfDeath();
+    	//Robot.DriveBase.circleOfDeath();
     }
 
     // Make this return true when this Command no longer needs to run execute()

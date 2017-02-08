@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.buttons.*;
 import edu.wpi.first.wpilibj.vision.*;
 import org.usfirst.frc.team6070.robot.commands.*;
 import edu.wpi.first.wpilibj.*;
+import org.usfirst.frc.team6070.robot.commands.StopDriving;;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -15,18 +16,47 @@ public class OI {
 	static Button button;
 	static Button button1;
 	
+	public static XboxController xbox;
+	
 	public OI()
 	{
-		stick = new Joystick(0);
-		arm  = new Joystick(1);
-		button = new JoystickButton(stick, 1);
-		button1 = new JoystickButton(stick, 2);
+	//	stick = new Joystick(0);
+	//	arm  = new Joystick(1);
+	//	button = new JoystickButton(stick, 1);
+	//	button1 = new JoystickButton(stick, 2);
 		
-		button.whenReleased(new START_DRIVING_GODDAMNIT());
-		button.whileHeld(new Donuts());
-		button1.whileHeld(new HIT_THE_FLOOR(0.3));
+	//	button.whenReleased(new START_DRIVING_GODDAMNIT());
+		//button.whileHeld(new Donuts());
+		//button1.whileHeld(new HIT_THE_FLOOR(0.3));
+		xbox = new XboxController(0);
+		
+		button = new JoystickButton(xbox,1);
+		button.whenPressed(new StopDriving());
+		
+	
+	
 	}
-	public static boolean button1()
+	
+	public static double driveX (){
+		if (Math.abs(xbox.getX()) <= 0.1){
+			return 0;
+			
+		} else {
+			return xbox.getX();
+		}
+		
+		
+	}
+	
+	public static double driveY (){
+		if (Math.abs(xbox.getY()) <= 0.1){
+			return 0;
+			
+		} else {
+			return xbox.getY();
+		}
+	}
+/*	public static boolean button1()
 	{
 		return stick.getRawButton(2);
 	}
@@ -64,7 +94,7 @@ public class OI {
 		else
 		{
 			return stick.getZ();
-		}
+		}*/
 	}
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
@@ -92,5 +122,5 @@ public class OI {
     // Start the command when the button is released  and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
-}
+
 
