@@ -1,4 +1,5 @@
 package org.usfirst.frc.team6070.robot;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -6,19 +7,19 @@ package org.usfirst.frc.team6070.robot;
  * floating around.
  */
 public class RobotMap {
-	public static int leftFront = 1;
-	public static int leftBack = 3;
-	public static int RightFront = 0;
-	public static int RightBack = 2;
 	
-	public static int Armmotor = 4;
-    // For example to map the left and right motors, you could define the
-    // following variables to use with your drivetrain subsystem.
-    // public static int leftMotor = 1;
-    // public static int rightMotor = 2;
-    
-    // If you are using multiple modules, make sure to define both the port
-    // number and the module. For example you with a rangefinder:
-    // public static int rangefinderPort = 1;
-    // public static int rangefinderModule = 1;
+	public static int backLeft = 0;
+	public static int backRight = 3;
+	public static int frontLeft = 1;
+	public static int frontright = 2;
+	
+	// For example to map the left and right motors, you could define the
+	// following variables to use with your drivetrain subsystem.
+	// public static int leftMotor = 1;
+	// public static int rightMotor = 2;
+
+	// If you are using multiple modules, make sure to define both the port
+	// number and the module. For example you with a rangefinder:
+	// public static int rangefinderPort = 1;
+	// public static int rangefinderModule = 1;
 }
